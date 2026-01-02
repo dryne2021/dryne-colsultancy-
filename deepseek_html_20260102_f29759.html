@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dryne Consultancy | Academic, Career & Digital Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a3a8f;
+            --secondary-blue: #2a56c6;
+            --light-blue: #e8efff;
+            --dark-gray: #2d3748;
+            --medium-gray: #4a5568;
+            --light-gray: #f7f9fc;
+            --white: #ffffff;
+            --accent-green: #10b981;
+            --whatsapp-green: #25D366;
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .logo-text span {
+            color: var(--accent-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav a.active {
+            color: var(--primary-blue);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-blue);
+            bottom: -5px;
+            left: 0;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 143, 0.9), rgba(26, 58, 143, 0.8)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 2px solid var(--accent-green);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent-green);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent-green);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .service-list li {
+            padding: 5px 0;
+            color: var(--medium-gray);
+        }
+
+        .service-list li i {
+            color: var(--accent-green);
+            margin-right: 10px;
+        }
+
+        /* Why Choose Us */
+        .why-choose-us {
+            background-color: var(--light-gray);
+        }
+
+        .reasons-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .reason-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        .reason-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .reason-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+        }
+
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px 10px;
+            font-weight: 600;
+            color: var(--medium-gray);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 4px;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-img {
+            height: 200px;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 3rem;
+        }
+
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .portfolio-content h4 {
+            font-size: 1.3rem;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .portfolio-category {
+            display: inline-block;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .contact-details a {
+            color: var(--medium-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary-blue);
+        }
+
+        .whatsapp-contact {
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .whatsapp-contact:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-contact i {
+            margin-right: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .form-button {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 16px 40px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .form-button:hover {
+            background-color: var(--secondary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-green);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">Dryne<span>Consultancy</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#portfolio">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Academic, Career & Digital Solutions That Deliver Results</h1>
+            <p>Dryne Consultancy is an all-in-one solution provider supporting students, professionals, and job seekers globally with expert guidance in academics, career development, and digital services.</p>
+            <a href="#contact" class="cta-button">Start Your Success Journey</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Dryne Consultancy</h2>
+                <p>We are a global consultancy firm dedicated to empowering individuals and organizations through expert guidance and innovative solutions.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Expertise, Reliability, and Confidentiality You Can Trust</h3>
+                    <p>Founded on the principles of excellence and integrity, Dryne Consultancy brings together a team of industry experts, academic professionals, and career coaches to provide comprehensive support for your educational and professional journey.</p>
+                    <p>We understand the challenges faced by students and professionals in today's competitive landscape, and we're committed to delivering tailored solutions that drive real results while maintaining the highest standards of confidentiality.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4>100% Confidential</h4>
+                                <p>Your privacy and data security are our top priorities.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4>Global Reach</h4>
+                                <p>Serving clients across 50+ countries with localized support.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4>Certified Experts</h4>
+                                <p>Our team consists of industry-certified professionals.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4>Proven Results</h4>
+                                <p>Track record of success with 95% client satisfaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Dryne Consultancy Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions designed to meet your academic, career, and digital needs</p>
+            </div>
+            
+            <div class="services-container">
+                <!-- Academic Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Academic Support</h3>
+                    <p>Expert tutoring and assignment assistance for college, university, and online programs.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Professional tutoring across disciplines</li>
+                        <li><i class="fas fa-check"></i> Assignment & research paper assistance</li>
+                        <li><i class="fas fa-check"></i> Dissertation & thesis support</li>
+                        <li><i class="fas fa-check"></i> Online course assistance</li>
+                        <li><i class="fas fa-check"></i> Academic editing & proofreading</li>
+                    </ul>
+                </div>
+                
+                <!-- Career Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Services</h3>
+                    <p>Comprehensive career development solutions to help you land your dream job.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Professional CV/Resume writing</li>
+                        <li><i class="fas fa-check"></i> LinkedIn profile optimization</li>
+                        <li><i class="fas fa-check"></i> Interview preparation & coaching</li>
+                        <li><i class="fas fa-check"></i> Portfolio development</li>
+                        <li><i class="fas fa-check"></i> Job search & placement guidance</li>
+                    </ul>
+                </div>
+                
+                <!-- Digital Solutions -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Digital Solutions</h3>
+                    <p>Custom web development and digital presence solutions for professionals and businesses.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Personal website development</li>
+                        <li><i class="fas fa-check"></i> Business website design</li>
+                        <li><i class="fas fa-check"></i> Professional portfolio creation</li>
+                        <li><i class="fas fa-check"></i> E-commerce solutions</li>
+                        <li><i class="fas fa-check"></i> Website maintenance & support</li>
+                    </ul>
+                </div>
+                
+                <!-- Consulting -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Consulting Services</h3>
+                    <p>Strategic guidance for freelancers, professionals, and organizations.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Freelance business setup</li>
+                        <li><i class="fas fa-check"></i> Professional consulting</li>
+                        <li><i class="fas fa-check"></i> Career transition planning</li>
+                        <li><i class="fas fa-check"></i> Skill development programs</li>
+                        <li><i class="fas fa-check"></i> Business strategy & planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Dryne Consultancy</h2>
+                <p>We go beyond traditional consultancy to deliver exceptional value and measurable results</p>
+            </div>
+            
+            <div class="reasons-container">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <h3>Results-Driven Approach</h3>
+                    <p>We focus on delivering tangible outcomes, from improved grades to successful job placements.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <h3>Professional Excellence</h3>
+                    <p>Our team comprises industry experts with proven track records in their respective fields.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <h3>Global Perspective</h3>
+                    <p>We understand international standards and requirements across education systems and job markets.</p>
+                </div>
+                
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <h3>Client-Centric Solutions</h3>
+                    <p>Every service is tailored to your specific needs, goals, and circumstances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Success Stories -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Real results from clients who have transformed their academic and professional journeys with us</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+                <button class="filter-btn" data-filter="career">Career</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Success Story 1 -->
+                <div class="portfolio-item" data-category="academic">
+                    <div class="portfolio-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Academic Success</div>
+                        <h4>MBA Thesis Excellence</h4>
+                        <p>"Dryne's academic experts helped me structure and refine my MBA thesis, resulting in a distinction grade and publication in a reputable journal."</p>
+                        <p><strong>Client:</strong> Michael, MBA Student</p>
+                    </div>
+                </div>
+                
+                <!-- Success Story 2 -->
+                <div class="portfolio-item" data-category="career">
+                    <div class="portfolio-img">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Career Advancement</div>
+                        <h4>Tech Career Transition</h4>
+                        <p>"With Dryne's career coaching and resume optimization, I successfully transitioned from marketing to a product manager role with a 40% salary increase."</p>
+                        <p><strong>Client:</strong> Sarah, Product Manager</p>
+                    </div>
+                </div>
+                
+                <!-- Success Story 3 -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="portfolio-category">Digital Portfolio</div>
+                        <h4>Freelance Web Developer</h4>
+                        <p>"Dryne developed my professional portfolio website, which helped me secure 5 new clients within two months and establish my freelance business."</p>
+                        <p><strong>Client:</strong> Alex, Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your academic or professional journey? Contact us today for a consultation.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Our Dallas Office</h4>
+                            <p>500 South Ervay Street<br>Dallas, Texas 75201<br>United States</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <a href="tel:+254796341760">+254 796 341 760</a>
+                            <p>Monday-Friday: 9am-6pm CST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>Chat with us directly on WhatsApp</p>
+                            <a href="https://wa.me/254796341760?text=Hello%20Dryne%20Consultancy,%20I'm%20interested%20in%20your%20services" class="whatsapp-contact" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <a href="mailto:dryne2021@gmail.com">dryne2021@gmail.com</a>
+                            <p>We respond within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="form-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Dryne Consultancy</h3>
+                    <p>Your trusted partner for academic, career, and digital solutions. Empowering students and professionals globally since 2015.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Success Stories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Academic Support</a></li>
+                        <li><a href="#services">Career Services</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Consulting</a></li>
+                        <li><a href="#services">Job Assistance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Dallas, Texas, USA</li>
+                        <li><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> <a href="tel:+254796341760" style="color: rgba(255,255,255,0.8);">+254 796 341 760</a></li>
+                        <li><i class="fab fa-whatsapp" style="margin-right: 10px; color: var(--whatsapp-green);"></i> <a href="https://wa.me/254796341760" style="color: rgba(255,255,255,0.8);" target="_blank">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> <a href="mailto:dryne2021@gmail.com" style="color: rgba(255,255,255,0.8);">dryne2021@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Dryne Consultancy. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '100%';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.backgroundColor = 'var(--white)';
+                navMenu.style.padding = '20px';
+                navMenu.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                
+                const navItems = navMenu.querySelectorAll('li');
+                navItems.forEach(item => {
+                    item.style.margin = '10px 0';
+                });
+            }
+        });
+        
+        // Portfolio filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.querySelector('#contactForm input[type="text"]').value;
+            const email = document.querySelector('#contactForm input[type="email"]').value;
+            const subject = document.querySelector('#contactForm input[type="text"]:nth-child(3)').value;
+            const message = document.querySelector('#contactForm textarea').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:dryne2021@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
